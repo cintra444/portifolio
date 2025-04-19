@@ -1,315 +1,417 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Eber Cintra </title>
-    <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Personalizado</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 
-<script type="text/javascript">  
+  <script type="text/javascript">
     emailjs.init('nM30MDPrTH_IBtVOn')
-</script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <div class="navbar" id="myNavbar">
-            
-                <a href="#home" class="active">Home</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#portifolio">Portifolio</a>
-                <a href="#contato">Contato</a>
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
-            
-        </div>
-    </header>
+  <div class="container">
 
-    <section class="principal">
+    <ul>
+      <li><a href="#home" title="Pagina Principal"><img src="assets/logo.png" alt="Logo" class="logo" /></a></li>
+      <li><a href="#home" title="Pagina Principal">Home</a></li>
+      <li><a href="#works" title="Conheça um pouco do que já aprontei">Works</a></li>
+      <li><a href="#about" title="Um pouco sobre minha jornada">About</a></li>
+      <li><a href="#contact" title="Estou aguardando seu contato">Contact</a></li>
+      <li style="float: right"><a href="mailto:cintra.eber@gmail.com" title="Bora?">💬 Me Contrate</a></li>
+    </ul>
+  
+    
+    <section id="home" class="home">
+      <div class="content">
         <div>
-            <h1>Olá, eu sou <span>Eber Cintra</span>.</h1>
-            <p>
-                Sou um desenvolvedor Fullstack recem formado pelo programa Serratec/Senai -RJ (770h), com conhecimentos em
-                Java, Spring Boot, React.js, React Native, JavaScript, HTML, CSS e postgreSQL.
-                Durante minha formação, desenvolvi projetos práticos que reforçaram minhas habilidades em desenvolvimento web e mobile,
-                incluindo a criação de APIs RESTful e gerenciamento de bancos de dados.
-            </p>
-                <p>
-                    Atualmente, busco uma oportunidade de estagio para aprimorar minhas habilidades e contribuir ativamente com a equipe
-                    agregando valor a empresa enquanto continuo minha evolução profissional. Estou aberto
-                    a novas oportunidades e desafios, e ansioso para aprender e crescer com a equipe.
-                </p>    
-                
-                    <a class="btn" href="#portifolio">Ver Portifolio</a>        
+          <h1>Olá, meu nome é <br /><span>Eber Cintra</span></h1>
+
+          Sou um Desenvolvedor Fullstack formado pelo Serratec/Senai -RJ<br />
+          Java | Spring Boot | React/React Native | APIs REST | PostgreSQL |
+          Aplicações Web e Mobile
         </div>
-
-        <section class="secao">
-            <h2 class="titulo-secao" id="sobre">Sobre mim</h2>
-            
-        
-                <p>
-                    Minha jornada na tecnologia começou em 2004, quando iniciei a faculdade de Análise de Sistemas. 
-                    Infelizmente, devido a dificuldades financeiras, não consegui concluir o curso. No entanto, 
-                    o que aprendi nunca foi esquecido. Ao longo dos anos, outras circunstâncias me impediram de 
-                    retomar os estudos, mas a vontade de trabalhar com tecnologia sempre esteve presente.
-                </p>
-                <p>
-                    Em 2024, surgiu uma oportunidade única: participar do programa de formação do Serratec/Senai. 
-                    Para isso, tomei a difícil decisão de deixar meu emprego e me dedicar integralmente ao curso — 
-                    uma escolha da qual não me arrependo nem por um segundo. A experiência tem sido enriquecedora, 
-                    tanto no aprendizado técnico quanto no crescimento pessoal.
-                </p>
-                <p>
-                    Minha evolução pode ser vista nos projetos que desenvolvi, sendo o Fruttyoog um dos mais desafiadores 
-                    e enriquecedores. Comecei esse projeto sozinho, enfrentando dificuldades, mas aprendendo muito 
-                    no processo. O desenvolvimento está em andamento, e cada obstáculo superado me torna um programador 
-                    mais preparado.
-                </p>
-                <p>
-                    Sou dedicado e focado no que faço. Minha esposa costuma brincar que, quando estou programando, 
-                    parece que entro no “mundo de Nárnia” — totalmente imerso no código. Gosto de desafios e acredito 
-                    que cada problema tem uma solução, bastando paciência e persistência para encontrá-la.
-                </p>
-                <p>
-                    Durante todo o curso, atuei em diversos trabalhos em equipe e sempre fiz questão de interagir, 
-                    conhecer cada membro e criar um ambiente colaborativo. Sou uma pessoa comunicativa, tranquila e 
-                    focada em manter boas relações. Quando surgem situações desconfortáveis, procuro resolver com diplomacia,
-                     trazendo equilíbrio para o grupo. Acredito que um time unido e bem alinhado sempre alcança melhores 
-                     resultados.
-                </p>
-           
-            </div>
-        </section>
-       
-        <section class="secao">
-            <h2 class="titulo-secao" id="portifolio">Portifolio</h2>
-    
-            <div class="grade-projetos">
-    
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/curunas.png" alt="jogo rpg curunas">
-                    <div class="info-projeto">
-                        <h3>O Mistério das Corunas</h3>
-                        <p class="resumo"> Projeto em grupo. G4_Enigmas é um jogo interativo no estilo "detetive", onde os jogadores assumem o papel do 
-                            investigador Damian, especializado em casos sobrenaturais. A missão é resolver o mistério por 
-                            trás de uma série de desaparecimentos na pequena e sombria cidade de Corunas.
-                            O jogo combina HTML, CSS e JavaScript para proporcionar uma experiência envolvente e misteriosa, 
-                            com páginas desenhadas para interatividade e exploração.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://caso-corunas.netlify.app/index.html" target="_blank">Jogar</a>
-                        <a href="https://github.com/arcarreiro/G4_enigmas" target="_blank">Projeto</a>
-                    </div>
-                </div>
-    
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/libras.png" alt="pagina elibras">
-                    <div class="info-projeto">
-                        <h3>Pagina Elibras</h3>
-                        <p class="resumo">
-                            Este projeto é uma aplicação de front-end desenvolvida como parte de um 
-                            trabalho individual. O objetivo é demonstrar habilidades em HTML, CSS e JavaScript.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://cintra444.github.io/pagina_Elibra/" target="_blank">Site</a>
-                        <a href="https://github.com/cintra444/pagina_Elibra" target="_blank">Projeto</a>
-                    </div>
-                </div>
-    
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/petropolis.png" alt="Petropolis Participa">
-                    <div class="info-projeto">
-                        <h3>Petropolis Participa</h3>
-                        <p class="resumo">
-                            Projeto final do curso de desenvolvimento web fullstack do Serratec/Senai-RJ. 
-                            O Petropolis Participa é uma aplicação web que permite aos cidadãos de Petrópolis, RJ, participar 
-                            ativamente do governo local, enviando sugestões e votando em propostas.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/serratec/2024_2_Petropolis-Participa-PMP_FrontEnd" target="_blank">front-end</a>
-                        <a href="https://github.com/serratec/2024_2_Petropolis-Participa-PMP_Backend" target="_blank">back-end</a>
-                    </div>
-                </div>
-    
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/react.png" alt="Computer Store">
-                    <div class="info-projeto">
-                        <h3>Computer Store</h3>
-                        <p class="resumo">
-                            Projeto em grupo. Computer Store é uma aplicação de e-commerce desenvolvida para a compra de eletrônicos. 
-                            A plataforma permite que os usuários naveguem por uma lista de produtos, adicionem itens ao carrinho, 
-                            ajustem quantidades e realizem a compra de forma intuitiva e segura. Toda a interface é construída em 
-                            React com integração a uma API REST para gerenciar produtos, usuários, pedidos e históricos de compra.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/joaogmmoreira/Grupo4_React" target="_blank">Projeto</a>
-                    
-                    </div>
-                </div>
-
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/portugol.png" alt="SerrateCorp">
-                    <div class="info-projeto">
-                        <h3>SerrateCorp</h3>
-                        <p class="resumo">
-                            Trabalho em grupo. O projeto visa o desenvolvimento de um loja a fim de explorar as estruturas de 
-                            dados estudadas na matéria de lógica de programação, na residência em TIC/Software do Serratec 2024.2. 
-                            A temática base do projeto é a venda de produtos para fornecer poderes ao usuário. São usadas estruturas
-                             de matrizes e vetores para cadastros de produtos e os elementos de dados, funções, condicionais e laços 
-                             de repetição a fim de tornar o programa o mais interativo possível.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/arcarreiro/G7_LP_21" target="_blank">Projeto</a>
-                    </div>
-                </div>
-
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/reactN.png" alt="Utilizando API externa">
-                    <div class="info-projeto">
-                        <h3>PopcornHub</h3>
-                        <p class="resumo">
-                            Projeto em grupo. PopcornHub é um aplicativo completo para amantes de cinema, oferecendo 
-                            informações atualizadas sobre os filmes mais populares do momento e permitindo a navegação 
-                            por categorias variadas. Com uma busca eficiente, o usuário pode facilmente 
-                            encontrar títulos ou categorias específicas. Além disso, o aplicativo oferece a funcionalidade de 
-                            adicionar filmes à lista de favoritos, proporcionando uma experiência personalizada e prática.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/joaocfw/GP1_ReactNative" target="_blank">Projeto</a>
-                    </div>
-                </div>
-                
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/ataqueC.png" alt="Ataque dos Clones">
-                    <div class="info-projeto">
-                        <h3>Ataque dos Clones</h3>
-                        <p class="resumo">
-                            Projeto individual. Ataque dos Clones é um clone de um projeto prático de react native, com o ojetivo de colocar em participar
-                            os conhecimentos adquiridos no curso de desenvolvimento web fullstack do Serratec/Senai-RJ.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/cintra444/REACT_NATIVE/tree/main/ataquedosclones" target="_blank">Projeto</a>
-                    </div>
-                </div>
-
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/poo.png" alt="Java POO">
-                    <div class="info-projeto">
-                        <h3>Concessionaria</h3>
-                        <p class="resumo">
-                            O objetivo deste trabalho é aplicar na prática os conceitos aprendidos na disciplina de Programação Orientada a Objetos com Java, desenvolvendo 
-                            um sistema simplificado de gerenciamento de uma concessionária de veículos.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/cintra444/poo_individuall" target="_blank">Projeto</a>
-                    </div>
-                </div>
-
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/joalheria.png" alt="Grupo POO">
-                    <div class="info-projeto">
-                        <h3>Joalheria</h3>
-                        <p class="resumo">
-                            Este projeto tem como objetivo desenvolver um e-commerce, focado na exploração de conceitos como classes, 
-                            Enums, métodos e objetos, entre outros tópicos abordados na disciplina de Programação Orientada a Objetos (POO) 
-                            da Residência em TIC/Software do Serratec 2024.2. A temática central do projeto gira em torno das 
-                            funcionalidades essenciais de um e-commerce, com ênfase em garantir que a plataforma seja intuitiva, 
-                            apresente um processo de login simples e seja eficiente. Para isso, utilizamos diversas 
-                            estruturas e funcionalidades da linguagem Java.
-                           </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/francisconascimento4490/G4-poo" target="_blank">Projeto </a>
-                    </div>
-                </div>
-
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/api.png" alt="Projeto em grupo de Api">
-                    <div class="info-projeto">
-                        <h3>Projeto 4</h3>
-                        <p class="resumo">
-                            Trabalho em grupo. O sistema de e-commerce foi desenvolvido para gerenciar categorias de produtos, clientes, pedidos, 
-                            funcionários e compras. A aplicação utiliza autenticação JWT para segurança e segue o padrão CRUD (Create, Read, Update, Delete) em suas principais entidades.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/UserCardinot/G1_API_Serratec" target="_blank">Projeto</a>
-                    </div>
-                </div>
-
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/fruttyoog.png" alt="fruttyoog">
-                    <div class="info-projeto">
-                        <h3>Fruttyoog</h3>
-                        <p class="resumo">
-                            Api para o projeto fruttyoogApp (em desenvolvimento), que tem como objetivo facilitar a gestão de uma empresa de produtos variados.
-                            O sistema foi desenvolvido para gerenciar categorias de produtos, clientes, fornecedores, pedidos, 
-                            funcionários e compras. A aplicação utiliza autenticação JWT para segurança e segue o padrão CRUD (Create, Read, Update, Delete) em suas principais entidades.
-                            Ainda estou ajustando conforme a necessidade do projeto fruttyoogApp.
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/cintra444/fruttyoog" target="_blank">Projeto</a>
-                    </div>
-                </div>
-
-                <div class="card-projeto">
-                    <img class="img-projeto" src="./imagem/app.png" alt="fruttyoogApp">
-                    <div class="info-projeto">
-                        <h3>FruttyoogApp</h3>
-                        <p class="resumo">
-                           Projeto em desenvolvimento. Aplicativo para gerenciamento de uma empresa de produtos variados.
-                            O sistema foi desenvolvido para gerenciar categorias de produtos, clientes, fornecedores, pedidos entre outros.
-
-                        </p>
-                        <span class="ver-mais">[+]</span>
-                        <a href="https://github.com/cintra444/fruttyoogApp" target="_blank">Projeto</a>
-                    </div>
-                </div>
-
-            </div>
-        
+        <div class="profile-pic-container">
+          <img src="assets/Perfil.png" alt="Eber Cintra" class="profile-pic" />
+        </div>
+      </div>
     </section>
-    
-    <section class="secao">
-        <h2 class="titulo-secao" id="contato">Contato</h2>
 
-        <div class="contato">
-            <div class="formulario">
-                <form id="contact-form">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
+    <section id="works">
+      <hr />
+      <h2><i class="fas fa-laptop-code"></i>Works</h2>
+
+      <!-- projeto fruttyoog api e app-->
+      <div class="content">
+        <div>
+          <h3>Fruttyoog</h3>
+          Em desenvolvimento: APIs REST, que tem como objetivo facilitar a gestão de uma empresa <br>
+          de produtos caseiros variados. A API foi desenvolvida para gerenciar categorias de <br>
+          produtos, clientes, fornecedores, pedidos, compras entre outras entidades. A aplicação<br />
+          utiliza autenticação JWT para segurança e segue o padrão CRUD (Create, Read, Update,<br>
+          Delete) em suas principais entidades.
+          <p class="stacks">
+
+            <i class="fab fa-java" title="Java"></i>
+            <i class="fas fa-leaf" title="Spring Boot"></i>
+            <i class="fas fa-lock" title="JWT"></i>
+            <i class="fas fa-database" title="PostgreSQL"></i>
+            <i class="fas fa-code" title="Springdoc OpenAPI"></i>
+            <i class="fas fa-envelope" title="Twilio SDK"></i>
+            <i class="fas fa-file-pdf" title="iText"></i>
+          </p>
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/fruttyoog/tree/master/workspace')">Repository</button>
+          </div>
         </div>
 
-        <div class="info"> 
-            <img src="./imagem/Perfil.png" alt="Eber Cintra">
-            <h3>Eber Cintra</h3>
-            <p><a href="mailto:cintra.eber@gmail.com">cintra.eber@gmail.com</a>.</p>
-        <p> Telefone: <a href="https://wa.me/552298835570">(22) 98835-5740 </a></p>
-        
-        <span class="social-icons">
-            <a href="https://www.linkedin.com/in/ebercintra" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/cintra444" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </span>
+        <div class="project-pic-container">
+          <img src="assets/fruttyoog.png" alt="Fruttyoog API" class="project-pic" onclick="abrirLightbox(this.src)" />
+        </div>
+      </div>
+
+      <div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
+
+      <div class="content">
+        <div class="project-pic-container">
+          <img src="assets/app.png" alt="Fruttyoog App" class="project-pic" onclick="abrirLightbox(this.src)"/>
+        </div>
+        <div>
+          <h3>FruttyoogApp</h3>
+          Em desenvolvimento. Está sendo desenvolvida em React Native para consumir as APIs REST do<br />
+          projeto Fruttyoog. Estou utilizando typescript para garantir uma melhor tipagem e <br>
+          organização do código. O aplicativo tem como objetivo facilitar a gestão de produtos <br>
+          caseiros variados, permitindo que os usuários façam pedidos e compras de forma prática e <br>
+          eficiente.    
+          <p class="stacks">
+
+            <i class="fab fa-react" title="React Native"></i>
+            <i class="fab fa-html5" title="HTML"></i>
+            <i class="fab fa-css3-alt" title="CSS"></i>
+            <i class="fas fa-network-wired" title="APIs REST"></i>
+            <i class="fas fa-lock" title="JWT"></i>
+          </p>
+
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/fruttyoogApp/tree/master')">Repository</button>
+        </div>
+
+        </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div id="repositoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Seu nome de usuario do github para ser adicionado como colaborador nos repositórios privados:</p>
+            <input type="text" id="github-username" placeholder="Nome de usuário do GitHub" />
+            <div class="modal-buttons">
+                <button class="btn" onclick="addUser()">Adicionar</button>
+                <a id="github-link" href="https://github.com/cintra444" target="_blank" class="btn github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
     </div>
-</div>
+
+    <div class="divisor-com-icone">
+      <span>• • •</span>
+    </div>
+
+      <!-- projeto Petropolis Participa api e app-->
+      <div class="content">
+        <div>
+          <h3>Petrópolis Participa API REST</h3>
+          Desenvolvimento em grupo para criar o backend deste projeto. Utilizamos Java Spring Boot, com<br />
+          o objetivo de criar uma API robusta e eficiente para interagir com o front-end. A aplicação<br>
+          foi projetada para permitir que os cidadãos de Petrópolis solicitem serviços emergenciais <br>
+          diretamente às secretarias da prefeitura.
+
+          <p class="stacks">
+            <i class="fab fa-java" title="Java"></i>
+            <i class="fas fa-leaf" title="Spring Boot"></i>
+            <i class="fas fa-database" title="PostgreSQL"></i>
+            <i class="fas fa-code" title="Springdoc OpenAPI"></i>
+            <i class="fas fa-lock" title="JWT"></i>
+          </p>
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/serratec/2024_2_Petropolis-Participa-PMP_Backend')">Repository</button>
+        </div>
+
+        </div>
+        <div class="project-pic-container">
+          <img src="./assets/petropolis_api.png" alt="Petropolis Participa API" class="project-pic" onclick="abrirLightbox(this.src)"/>
+        </div>
+      </div>
+
+<div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
+
+      <div class="content">
+        <div class="project-pic-container">
+          <img src="assets/petropolis.png" alt="Petropolis Participa App" class="project-pic" onclick="abrirLightbox(this.src)"/>
+        </div>
+        <div>
+          <h3>Petrópolis Participa - site</h3>
+          O front-end deste projeto foi desenvolvido utilizando React, proporcionando uma interface <br>
+          moderna e responsiva para os usuários. A aplicação permite que os cidadãos se cadastrem <br>
+          e solicitem serviços emergenciais diretamente às secretarias da prefeitura.<br />
+          O design foi cuidadosamente elaborado para garantir uma experiência intuitiva e agradável <br>
+          para os usuários.
+          <p class="stacks">
+            <i class="fab fa-react" title="React"></i>
+            <i class="fab fa-html5" title="HTML"></i>
+            <i class="fab fa-css3-alt" title="CSS"></i>
+            <i class="fas fa-network-wired" title="APIs REST"></i>
+            <i class="fas fa-lock" title="JWT"></i>
+          </p>
+
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/serratec/2024_2_Petropolis-Participa-PMP_FrontEnd')">Repository</button>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
+
+      <!-- Desafio Neki api e site-->
+      <div class="content">
+        <div>
+          <h3>Gerenciador Eventos API REST</h3>
+          Desenvolvi este projeto como parte de um desafio para criar um gerenciador de eventos <br>
+          utilizando Java Spring Boot. O objetivo foi construir uma aplicação robusta e <br>
+          eficiente para gerenciar eventos, incluindo funcionalidades de administração, login, <br>
+          upload de imagens, gerenciamento de usuários, cadastro de eventos, etc.
+          <p class="stacks">
+            <i class="fab fa-java" title="Java"></i>
+            <i class="fas fa-leaf" title="Spring Boot"></i>
+            <i class="fas fa-lock" title="JWT"></i>
+            <i class="fas fa-database" title="PostgreSQL"></i>
+            <i class="fas fa-code" title="Springdoc OpenAPI"></i>
+
+          </p>
+
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/desafio_residencia-BACK-END_Gerenciador_eventos')">Repository</button>
+        </div>
+
+        </div>
+        <div class="project-pic-container">
+          <img src="./assets/Neki_api.png" alt="Gerenciador eventos API" class="project-pic" onclick="abrirLightbox(this.src)"/>
+        </div>
+      </div>
+
+      <div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
+
+      <div class="content">
+        <div class="project-pic-container">
+          <img src="assets/desafioNeki.png" alt="Petropolis Participa App" class="project-pic" onclick="abrirLightbox(this.src)" />
+        </div>
+        <div>
+          <h3>Gerenciador Eventos - site</h3>
+          Front-end para o consumo da Api Gerenciador Eventos. Desenvolvido em React com<br>
+          interface moderna e responsiva. O objetivo é proporcionar uma interface intuitiva e<br>
+          eficiente para os usuários interagirem com o gerenciador de eventos.
+          <p class="stacks">
+            <i class="fab fa-react" title="React"></i>
+            <i class="fab fa-html5" title="HTML"></i>
+            <i class="fab fa-css3-alt" title="CSS"></i>
+            <i class="fas fa-network-wired" title="APIs REST"></i>
+            <i class="fas fa-lock" title="JWT"></i>
+            <i class="fas fa-database" title="PostgreSQL"></i>
+          </p>
+
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/desafio_residencia-FRONT-END_Gerenciador_eventos')">Repository</button>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
+
+      <!-- PopCornHub app-->
+      <div class="content">
+        <div>
+          <h3>PopCornHub</h3>
+          PopcornHub é um aplicativo completo para amantes de cinema, oferecendo informações<br>
+          atualizadas sobre os filmes mais populares do momento e permitindo a navegação por <br>
+          categorias variadas. Com uma busca eficiente, o usuário pode facilmente encontrar títulos ou<br />
+          categorias específicas. Além disso, o aplicativo oferece a funcionalidade de adicionar <br>
+          filmes à lista de favoritos, proporcionando uma experiência personalizada e prática. <br>
+          Desenvolvido em React Native utilizando um API externa. Desenvolvimento feito em grupo.
+          <p class="stacks">
+            <i class="fab fa-react" title="React Native"></i>
+            <i class="fab fa-html5" title="HTML"></i>
+            <i class="fab fa-css3-alt" title="CSS"></i>
+          </p>
+          
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='./aplicacao.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/joaocfw/GP1_ReactNative')">Repository</button>
+          </div> 
+          
+        </div>
+        
+        <div class="project-pic-container">
+          <img src="assets/reactNative.png" alt="PopCornHub App" class="project-pic" onclick="abrirLightbox(this.src)"/>
+        </div>
+      </div>
+
+      <div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
+
+      <!-- Caso Corunas app-->
+      <div class="content">
+        <div class="project-pic-container">
+          <img src="assets/curunas.png" alt="Jogo Caso de Corunas" class="project-pic" onclick="abrirLightbox(this.src)"/>
+        </div>
+        <div>
+          <h3>Caso-Corunas</h3>
+          G4_Enigmas foi desenvolvido em grupo. É um jogo interativo no estilo "detetive", onde <br>
+          os jogadores assumem o papel do investigador Damian, especializado em resolver casos difíceis.<br>
+          A missão é resolver o mistério por trás de uma série de desaparecimentos na pequena e sombria<br>
+          cidade de Corunas. O jogo combina HTML, CSS e JavaScript para proporcionar uma experiência <br>
+          envolvente e misteriosa, com páginas desenhadas para interatividade e exploração. O sistema <br>
+          de envio de emails permite que os jogadores enviem suas teorias ou perguntas diretamente <br>
+          para nossa equipe de suporte.
+          <p class="stacks">
+            <i class="fab fa-html5" title="HTML"></i>
+            <i class="fab fa-css3-alt" title="CSS"></i>
+            <i class="fab fa-js" title="JavaScript"></i>
+          </p>
+
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='https://caso-corunas.netlify.app/index.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/arcarreiro/G4_enigmas')">Repository</button>
+        </div>
+
+
+        </div>
+      </div>
+
+      <div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
+
+      <!-- Concessionaria java-->
+      <div class="content">
+        <div>
+          <h3>Concessionaria</h3>
+          Desenvolvi este sistema de administração de concessionárias utilizando Java, com o objetivo<br>
+          de gerenciar informações sobre concessionárias e seus carros. A aplicação permite a criação de<br />
+          relatórios, o armazenamento e a recuperação de dados, além de oferecer funcionalidades de <br>
+          filtragem e comparação entre concessionárias.
+          <p class="stacks">
+            <i class="fab fa-java" title="Java"></i>
+          </p>
+          
+          <div class="buttons">
+            <button class="btn" onclick="window.location.href='como-executar.html'">Aplicação</button>
+            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/poo_individuall/tree/main/trabalho_individual_carro_concessionaria')">Repository</button>
+          </div>
+          
+        </div>
+        <div class="project-pic-container">
+          <img src="assets/poo.png" alt="Concessionaria Java" class="project-pic" onclick="abrirLightbox(this.src)" />
+        </div>
+      </div>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Meu Portifolio - Todos os direitos reservados</p>
-    </footer>
-    <script src="landingPage.js"></script>
+
+    <section id="about">
+      <hr />
+      <h2><i class="fas fa-user"></i>About</h2>
+
+      <div class="about-content">
+        Minha jornada na tecnologia começou em 2004, quando iniciei a faculdade de Análise de Sistemas.
+        Por motivos financeiros, não consegui concluir, mas o interesse pela área nunca desapareceu.
+        Em 2024, tive a oportunidade de participar do curso de formação em Desenvolvimento Full Stack
+        pelo Serratec/SENAI, e abracei de vez essa carreira, deixando meu emprego para me dedicar integralmente
+        à programação.
+        <br><br>
+        Desde então, mergulhei de cabeça em projetos desafiadores, como o Fruttyoog,
+        onde desenvolvi sozinho grande parte das funcionalidades e aprendi muito superando obstáculos.
+        Sou focado, curioso e apaixonado por resolver problemas. Quando estou programando, fico completamente
+        imerso — minha esposa brinca que desapareço no “mundo de Nárnia”.
+        <br><br>
+        Também valorizo o trabalho em equipe e a boa convivência. Tenho facilidade em me comunicar,
+        manter o ambiente leve e lidar com situações difíceis de forma diplomática.
+        Minha experiência anterior como intérprete de Libras e conferente de mercadorias me ensinou a
+        ser responsável, detalhista e colaborativo.
+        <br><br>
+        Atualmente, sou formado como desenvolvedor full stack, com domínio de tecnologias como Java, Spring Boot,
+        React, React Native, HTML e CSS. Busco oportunidades para continuar crescendo e contribuindo com soluções
+        práticas, eficientes e criativas.
+    </section>
+
+    <section id="contact">
+      <hr />
+      <h2><i class="fas fa-paper-plane"></i>Contact</h2>
+
+      <div class="formulario">
+        <form id="contact-form">
+
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 - Todos os direitos reservados | Desenvolvido por Eber Cintra | (22) 98835-5740</p>
+    <div class="social-icons">
+      <a href="https://github.com/cintra444" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ebercintra/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/552298835570" target="_blank"><i class="fab fa-whatsapp"></a></i>
+      <a href="assets/Profile (2).pdf" target="_blank" title="Curriculum Vitae"><i class="fas fa-file-alt icon"></i></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <div id="lightbox" onclick="fecharLightbox()">
+    <img id="lightbox-img" />
+  </div>
+  
 </body>
-</html></section></div></html>
+
+</html>
