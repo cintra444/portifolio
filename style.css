@@ -525,3 +525,69 @@ a.active{
         max-width: 100%;
     }
 }
+
+/* Toggle de tema */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #0F1B61;
+  transition: color 0.3s ease;
+}
+#theme-toggle:hover {
+  color: #7F00E0;
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #000;
+  color: #e1e1e1;
+}
+.dark-mode .container {
+  background-color: #000;
+}
+.dark-mode .content, .about-content {
+  color: #fff;
+}
+.dark-mode .nav-list {
+  background:#000
+}
+.dark-mode .nav-list li a {
+  color: #fff;
+}
+.dark-mode .nav-list li a:hover,
+.dark-mode .buttons .btn:hover {
+  color: #7F00E0;
+}
+.dark-mode .formulario,
+.dark-mode .modal-content {
+  background-color: #000;
+  color: #fff;
+}
+.dark-mode section h2,
+.dark-mode section h3,
+.dark-mode section p {
+  
+  color: #f15107;
+}
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #000;  
+  border-color: #fff;
+}
+.dark-mode form button,
+.dark-mode .buttons .btn {
+  background-color: #000;
+  color: #fff;
+}
+.dark-mode .footer {
+  background-color: #000;
+  color: #fff;
+}
+.dark-mode .footer .social-icons a {
+  color: #fff;
+}
+.dark-mode .project-pic-container {
+  background-color: #000;
+}

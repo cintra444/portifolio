@@ -20,7 +20,7 @@
   <div class="container">
     <header>
       <nav class="nav">
-        <div id="mobile-menu" class="menu-icon">
+        <div id="mobile-menu" class="menu-icon" aria-label="Abrir Menu" role="button" tabindex="0">
           <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-list" id="nav-list">
@@ -30,6 +30,7 @@
           <li><a href="#about" title="Um pouco sobre minha jornada">About</a></li>
           <li><a href="#contact" title="Estou aguardando seu contato">Contact</a></li>
           <li style="float: right"><a href="mailto:cintra.eber@gmail.com" title="Bora?">💬 Me Contrate</a></li>
+          <li id="theme-toggle" aria-label="Alternar claro/escuro" role="button" tabindex="1" title="Alternar tema">🌓</li>
         </ul>
       </nav>
     </header>
@@ -414,6 +415,7 @@
           </div>
 
           <button type="submit">Enviar</button>
+          <div id="form-status" aria-live="polite" style="position: absolute; left:-999px"></div>
         </form>
       </div>
     </section>
@@ -430,8 +432,8 @@
     </div>
   </footer>
   <script src="script.js"></script>
-  <div id="lightbox" onclick="fecharLightbox()">
-    <img id="lightbox-img" />
+  <div id="lightbox" onclick="fecharLightbox()" tabindex="0" role="button" aria-label="Fechar Lightbox">
+    <img id="lightbox-img" alt="Imagem ampliada" />
   </div>
 
 </body>

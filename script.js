@@ -36,21 +36,19 @@ if (!emailRegex.test(email)) {
       message: mensagem,
     };
 
-    console.log("parametros enviados: ", templateParams);
 
     emailjs.send("service_0vp9zkg", "template_qxcsrp2", templateParams).then(
       function (response) {
-        console.log("Resposta do EmailJS:", response);
-        alert("Mensagem enviada com sucesso!");
-        document.getElementById("contact-form").reset();
+       formStatus.textContent = "Mensagem enviada com sucesso!";
+       form.reset(); // Limpa o formulário após o envio
       },
       function (error) {
-        alert(
-          "Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde."
-        );
+        formStatus.textContent = "Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.";
+        console.error("Erro:", error);
       }
     );
-  }); 
+  });
+  
   
 
   
@@ -59,6 +57,7 @@ if (!emailRegex.test(email)) {
 function openModal(githubUrl) {
   document.getElementById("github-link").href = githubUrl;
   document.getElementById("repositoryModal").style.display = "flex";
+  document.getElementById("github-username").focus(); // Foca no campo de entrada
 }
 
 function closeModal() {
@@ -113,8 +112,22 @@ function abrirLightbox(src) {
   const lightboxImg = document.getElementById("lightbox-img");
   lightboxImg.src = src;
   lightbox.style.display = "flex";
+  lightbox.focus(); // Foca no lightbox para capturar eventos de teclado
 }
 
 function fecharLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
+// Dark mode toggle
+const toggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+}
+
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
