@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio Personalizado</title>
+  <title>Eber Cintra - Desenvolvedor Fullstack</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
 
@@ -18,23 +18,29 @@
 
 <body>
   <div class="container">
+    <header>
+      <nav class="nav">
+        <div id="mobile-menu" class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#home" title="Pagina Principal"><img src="assets/logo.png" alt="Logo" class="logo" /></a></li>
+          <li><a href="#home" title="Pagina Principal">Home</a></li>
+          <li><a href="#works" title="Conheça um pouco do que já aprontei">Works</a></li>
+          <li><a href="#about" title="Um pouco sobre minha jornada">About</a></li>
+          <li><a href="#contact" title="Estou aguardando seu contato">Contact</a></li>
+          <li style="float: right"><a href="mailto:cintra.eber@gmail.com" title="Bora?">💬 Me Contrate</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <ul>
-      <li><a href="#home" title="Pagina Principal"><img src="assets/logo.png" alt="Logo" class="logo" /></a></li>
-      <li><a href="#home" title="Pagina Principal">Home</a></li>
-      <li><a href="#works" title="Conheça um pouco do que já aprontei">Works</a></li>
-      <li><a href="#about" title="Um pouco sobre minha jornada">About</a></li>
-      <li><a href="#contact" title="Estou aguardando seu contato">Contact</a></li>
-      <li style="float: right"><a href="mailto:cintra.eber@gmail.com" title="Bora?">💬 Me Contrate</a></li>
-    </ul>
-  
-    
+
     <section id="home" class="home">
       <div class="content">
         <div>
           <h1>Olá, meu nome é <br /><span>Eber Cintra</span></h1>
 
-          Sou um Desenvolvedor Fullstack formado pelo Serratec/Senai -RJ<br />
+          Desenvolvedor Fullstack formado pelo Serratec/Senai -RJ<br />
           Java | Spring Boot | React/React Native | APIs REST | PostgreSQL |
           Aplicações Web e Mobile
         </div>
@@ -52,10 +58,10 @@
       <div class="content">
         <div>
           <h3>Fruttyoog</h3>
-          Em desenvolvimento: APIs REST, que tem como objetivo facilitar a gestão de uma empresa <br>
-          de produtos caseiros variados. A API foi desenvolvida para gerenciar categorias de <br>
-          produtos, clientes, fornecedores, pedidos, compras entre outras entidades. A aplicação<br />
-          utiliza autenticação JWT para segurança e segue o padrão CRUD (Create, Read, Update,<br>
+          Em desenvolvimento: APIs REST, que tem como objetivo facilitar a gestão de uma empresa 
+          de produtos caseiros variados. A API foi desenvolvida para gerenciar categorias de 
+          produtos, clientes, fornecedores, pedidos, compras entre outras entidades. A aplicação
+          utiliza autenticação JWT para segurança e segue o padrão CRUD (Create, Read, Update,
           Delete) em suas principais entidades.
           <p class="stacks">
 
@@ -69,7 +75,8 @@
           </p>
           <div class="buttons">
             <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/fruttyoog/tree/master/workspace')">Repository</button>
+            <button class="btn repository-btn"
+              onclick="openModal('https://github.com/cintra444/fruttyoog/tree/master/workspace')">Repository</button>
           </div>
         </div>
 
@@ -83,60 +90,61 @@
       </div>
 
       <div class="content">
-        <div class="project-pic-container">
-          <img src="assets/app.png" alt="Fruttyoog App" class="project-pic" onclick="abrirLightbox(this.src)"/>
-        </div>
         <div>
           <h3>FruttyoogApp</h3>
-          Em desenvolvimento. Está sendo desenvolvida em React Native para consumir as APIs REST do<br />
-          projeto Fruttyoog. Estou utilizando typescript para garantir uma melhor tipagem e <br>
-          organização do código. O aplicativo tem como objetivo facilitar a gestão de produtos <br>
-          caseiros variados, permitindo que os usuários façam pedidos e compras de forma prática e <br>
-          eficiente.    
+          Em desenvolvimento. Está sendo desenvolvida em React Native para consumir as APIs REST do
+          projeto Fruttyoog. Estou utilizando typescript para garantir uma melhor tipagem e 
+          organização do código. O aplicativo tem como objetivo facilitar a gestão de produtos 
+          caseiros variados, permitindo que os usuários façam pedidos e compras de forma prática e 
+          eficiente.
           <p class="stacks">
-
+            
             <i class="fab fa-react" title="React Native"></i>
             <i class="fab fa-html5" title="HTML"></i>
             <i class="fab fa-css3-alt" title="CSS"></i>
             <i class="fas fa-network-wired" title="APIs REST"></i>
             <i class="fas fa-lock" title="JWT"></i>
           </p>
-
+          
           <div class="buttons">
             <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/fruttyoogApp/tree/master')">Repository</button>
+            <button class="btn repository-btn"
+            onclick="openModal('https://github.com/cintra444/fruttyoogApp/tree/master')">Repository</button>
+          </div>
+          
         </div>
-
+        <div class="project-pic-container">
+          <img src="assets/app.png" alt="Fruttyoog App" class="project-pic" onclick="abrirLightbox(this.src)" />
         </div>
       </div>
-
+      
 
       <!-- Modal -->
       <div id="repositoryModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p>Digite seu usuário do GitHub para conceder acesso aos repositórios privados.</p>
-            <input type="text" id="github-username" placeholder="Nome de usuário do GitHub" />
-            <div class="modal-buttons">
-                <button class="btn" onclick="addUser()">Adicionar</button>
-                <a id="github-link" href="https://github.com/cintra444" target="_blank" class="btn github-btn">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>Digite seu usuário do GitHub para conceder acesso aos repositórios privados.</p>
+          <input type="text" id="github-username" placeholder="Nome de usuário do GitHub" />
+          <div class="modal-buttons">
+            <button class="btn" onclick="addUser()">Adicionar</button>
+            <a id="github-link" href="https://github.com/cintra444" target="_blank" class="btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="divisor-com-icone">
-      <span>• • •</span>
-    </div>
+      <div class="divisor-com-icone">
+        <span>• • •</span>
+      </div>
 
       <!-- projeto Petropolis Participa api e app-->
       <div class="content">
         <div>
           <h3>Petrópolis Participa API REST</h3>
-          Desenvolvimento em grupo para criar o backend deste projeto. Utilizamos Java Spring Boot, com<br />
-          o objetivo de criar uma API robusta e eficiente para interagir com o front-end. A aplicação<br>
-          foi projetada para permitir que os cidadãos de Petrópolis solicitem serviços emergenciais <br>
+          Desenvolvimento em grupo para criar o backend deste projeto. Utilizamos Java Spring Boot, com
+          o objetivo de criar uma API robusta e eficiente para interagir com o front-end. A aplicação
+          foi projetada para permitir que os cidadãos de Petrópolis solicitem serviços emergenciais 
           diretamente às secretarias da prefeitura.
 
           <p class="stacks">
@@ -148,29 +156,28 @@
           </p>
           <div class="buttons">
             <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/serratec/2024_2_Petropolis-Participa-PMP_Backend')">Repository</button>
-        </div>
+            <button class="btn repository-btn"
+              onclick="openModal('https://github.com/serratec/2024_2_Petropolis-Participa-PMP_Backend')">Repository</button>
+          </div>
 
         </div>
         <div class="project-pic-container">
-          <img src="./assets/petropolis_api.png" alt="Petropolis Participa API" class="project-pic" onclick="abrirLightbox(this.src)"/>
+          <img src="./assets/petropolis_api.png" alt="Petropolis Participa API" class="project-pic"
+            onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
-<div class="divisor-com-icone">
+      <div class="divisor-com-icone">
         <span>• • •</span>
       </div>
 
       <div class="content">
-        <div class="project-pic-container">
-          <img src="assets/petropolis.png" alt="Petropolis Participa App" class="project-pic" onclick="abrirLightbox(this.src)"/>
-        </div>
         <div>
           <h3>Petrópolis Participa - site</h3>
-          O front-end deste projeto foi desenvolvido utilizando React, proporcionando uma interface <br>
-          moderna e responsiva para os usuários. A aplicação permite que os cidadãos se cadastrem <br>
-          e solicitem serviços emergenciais diretamente às secretarias da prefeitura.<br />
-          O design foi cuidadosamente elaborado para garantir uma experiência intuitiva e agradável <br>
+          O front-end deste projeto foi desenvolvido utilizando React, proporcionando uma interface 
+          moderna e responsiva para os usuários. A aplicação permite que os cidadãos se cadastrem 
+          e solicitem serviços emergenciais diretamente às secretarias da prefeitura.
+          O design foi cuidadosamente elaborado para garantir uma experiência intuitiva e agradável 
           para os usuários.
           <p class="stacks">
             <i class="fab fa-react" title="React"></i>
@@ -179,12 +186,17 @@
             <i class="fas fa-network-wired" title="APIs REST"></i>
             <i class="fas fa-lock" title="JWT"></i>
           </p>
-
+          
           <div class="buttons">
             <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/serratec/2024_2_Petropolis-Participa-PMP_FrontEnd')">Repository</button>
+            <button class="btn repository-btn"
+            onclick="openModal('https://github.com/serratec/2024_2_Petropolis-Participa-PMP_FrontEnd')">Repository</button>
+          </div>
+          
         </div>
-
+        <div class="project-pic-container">
+          <img src="assets/petropolis.png" alt="Petropolis Participa App" class="project-pic"
+            onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -196,9 +208,9 @@
       <div class="content">
         <div>
           <h3>Gerenciador Eventos API REST</h3>
-          Desenvolvi este projeto como parte de um desafio para criar um gerenciador de eventos <br>
-          utilizando Java Spring Boot. O objetivo foi construir uma aplicação robusta e <br>
-          eficiente para gerenciar eventos, incluindo funcionalidades de administração, login, <br>
+          Desenvolvi este projeto como parte de um desafio para criar um gerenciador de eventos 
+          utilizando Java Spring Boot. O objetivo foi construir uma aplicação robusta e 
+          eficiente para gerenciar eventos, incluindo funcionalidades de administração, login, 
           upload de imagens, gerenciamento de usuários, cadastro de eventos, etc.
           <p class="stacks">
             <i class="fab fa-java" title="Java"></i>
@@ -211,12 +223,14 @@
 
           <div class="buttons">
             <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/desafio_Neki')">Repository</button>
-        </div>
+            <button class="btn repository-btn"
+              onclick="openModal('https://github.com/cintra444/desafio_Neki')">Repository</button>
+          </div>
 
         </div>
         <div class="project-pic-container">
-          <img src="./assets/Neki_api.png" alt="Gerenciador eventos API" class="project-pic" onclick="abrirLightbox(this.src)"/>
+          <img src="./assets/Neki_api.png" alt="Gerenciador eventos API" class="project-pic"
+            onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -225,13 +239,10 @@
       </div>
 
       <div class="content">
-        <div class="project-pic-container">
-          <img src="assets/desafioNeki.png" alt="Petropolis Participa App" class="project-pic" onclick="abrirLightbox(this.src)" />
-        </div>
         <div>
           <h3>Gerenciador Eventos - site</h3>
-          Front-end para o consumo da Api Gerenciador Eventos. Desenvolvido em React com<br>
-          interface moderna e responsiva. O objetivo é proporcionar uma interface intuitiva e<br>
+          Front-end para o consumo da Api Gerenciador Eventos. Desenvolvido em React com
+          interface moderna e responsiva. O objetivo é proporcionar uma interface intuitiva e
           eficiente para os usuários interagirem com o gerenciador de eventos.
           <p class="stacks">
             <i class="fab fa-react" title="React"></i>
@@ -241,12 +252,17 @@
             <i class="fas fa-lock" title="JWT"></i>
             <i class="fas fa-database" title="PostgreSQL"></i>
           </p>
-
+          
           <div class="buttons">
             <button class="btn" onclick="window.location.href='aplicacao.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/desafio_residencia-FRONT-END_Gerenciador_eventos')">Repository</button>
+            <button class="btn repository-btn"
+            onclick="openModal('https://github.com/cintra444/desafio_residencia-FRONT-END_Gerenciador_eventos')">Repository</button>
+          </div>
+          
         </div>
-
+        <div class="project-pic-container">
+          <img src="assets/desafioNeki.png" alt="Petropolis Participa App" class="project-pic"
+            onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -258,27 +274,29 @@
       <div class="content">
         <div>
           <h3>PopCornHub</h3>
-          PopcornHub é um aplicativo completo para amantes de cinema, oferecendo informações<br>
-          atualizadas sobre os filmes mais populares do momento e permitindo a navegação por <br>
-          categorias variadas. Com uma busca eficiente, o usuário pode facilmente encontrar títulos ou<br />
-          categorias específicas. Além disso, o aplicativo oferece a funcionalidade de adicionar <br>
-          filmes à lista de favoritos, proporcionando uma experiência personalizada e prática. <br>
+          PopcornHub é um aplicativo completo para amantes de cinema, oferecendo informações
+          atualizadas sobre os filmes mais populares do momento e permitindo a navegação por 
+          categorias variadas. Com uma busca eficiente, o usuário pode facilmente encontrar títulos ou
+          categorias específicas. Além disso, o aplicativo oferece a funcionalidade de adicionar 
+          filmes à lista de favoritos, proporcionando uma experiência personalizada e prática. 
           Desenvolvido em React Native utilizando um API externa. Desenvolvimento feito em grupo.
           <p class="stacks">
             <i class="fab fa-react" title="React Native"></i>
             <i class="fab fa-html5" title="HTML"></i>
             <i class="fab fa-css3-alt" title="CSS"></i>
           </p>
-          
+
           <div class="buttons">
             <button class="btn" onclick="window.location.href='./aplicacao.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/joaocfw/GP1_ReactNative')">Repository</button>
-          </div> 
-          
+            <button class="btn repository-btn"
+              onclick="openModal('https://github.com/joaocfw/GP1_ReactNative')">Repository</button>
+          </div>
+
         </div>
-        
+
         <div class="project-pic-container">
-          <img src="assets/reactNative.png" alt="PopCornHub App" class="project-pic" onclick="abrirLightbox(this.src)"/>
+          <img src="assets/reactNative.png" alt="PopCornHub App" class="project-pic"
+            onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -288,30 +306,33 @@
 
       <!-- Caso Corunas app-->
       <div class="content">
-        <div class="project-pic-container">
-          <img src="assets/curunas.png" alt="Jogo Caso de Corunas" class="project-pic" onclick="abrirLightbox(this.src)"/>
-        </div>
         <div>
           <h3>Caso-Corunas</h3>
-          G4_Enigmas foi desenvolvido em grupo. É um jogo interativo no estilo "detetive", onde <br>
-          os jogadores assumem o papel do investigador Damian, especializado em resolver casos difíceis.<br>
-          A missão é resolver o mistério por trás de uma série de desaparecimentos na pequena e sombria<br>
-          cidade de Corunas. O jogo combina HTML, CSS e JavaScript para proporcionar uma experiência <br>
-          envolvente e misteriosa, com páginas desenhadas para interatividade e exploração. O sistema <br>
-          de envio de emails permite que os jogadores enviem suas teorias ou perguntas diretamente <br>
+          G4_Enigmas foi desenvolvido em grupo. É um jogo interativo no estilo "detetive", onde 
+          os jogadores assumem o papel do investigador Damian, especializado em resolver casos difíceis.
+          A missão é resolver o mistério por trás de uma série de desaparecimentos na pequena e sombria
+          cidade de Corunas. O jogo combina HTML, CSS e JavaScript para proporcionar uma experiência 
+          envolvente e misteriosa, com páginas desenhadas para interatividade e exploração. O sistema 
+          de envio de emails permite que os jogadores enviem suas teorias ou perguntas diretamente 
           para nossa equipe de suporte.
           <p class="stacks">
             <i class="fab fa-html5" title="HTML"></i>
             <i class="fab fa-css3-alt" title="CSS"></i>
             <i class="fab fa-js" title="JavaScript"></i>
           </p>
-
+          
           <div class="buttons">
-            <button class="btn" onclick="window.location.href='https://caso-corunas.netlify.app/index.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/arcarreiro/G4_enigmas')">Repository</button>
+            <button class="btn"
+            onclick="window.location.href='https://caso-corunas.netlify.app/index.html'">Aplicação</button>
+            <button class="btn repository-btn"
+            onclick="openModal('https://github.com/arcarreiro/G4_enigmas')">Repository</button>
+          </div>
+          
+          
         </div>
-
-
+        <div class="project-pic-container">
+          <img src="assets/curunas.png" alt="Jogo Caso de Corunas" class="project-pic"
+            onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -323,19 +344,20 @@
       <div class="content">
         <div>
           <h3>Concessionaria</h3>
-          Desenvolvi este sistema de administração de concessionárias utilizando Java, com o objetivo<br>
-          de gerenciar informações sobre concessionárias e seus carros. A aplicação permite a criação de<br />
-          relatórios, o armazenamento e a recuperação de dados, além de oferecer funcionalidades de <br>
+          Desenvolvi este sistema de administração de concessionárias utilizando Java, com o objetivo
+          de gerenciar informações sobre concessionárias e seus carros. A aplicação permite a criação de
+          relatórios, o armazenamento e a recuperação de dados, além de oferecer funcionalidades de 
           filtragem e comparação entre concessionárias.
           <p class="stacks">
             <i class="fab fa-java" title="Java"></i>
           </p>
-          
+
           <div class="buttons">
             <button class="btn" onclick="window.location.href='como-executar.html'">Aplicação</button>
-            <button class="btn repository-btn" onclick="openModal('https://github.com/cintra444/poo_individuall/tree/main/trabalho_individual_carro_concessionaria')">Repository</button>
+            <button class="btn repository-btn"
+              onclick="openModal('https://github.com/cintra444/poo_individuall/tree/main/trabalho_individual_carro_concessionaria')">Repository</button>
           </div>
-          
+
         </div>
         <div class="project-pic-container">
           <img src="assets/poo.png" alt="Concessionaria Java" class="project-pic" onclick="abrirLightbox(this.src)" />
@@ -411,7 +433,7 @@
   <div id="lightbox" onclick="fecharLightbox()">
     <img id="lightbox-img" />
   </div>
-  
+
 </body>
 
 </html>

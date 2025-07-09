@@ -2,10 +2,16 @@
 const mobileMenu = document.getElementById('mobile-menu');
 const navList = document.querySelector('.nav-list');
 
-mobileMenu.addEventListener('click', () => {
+mobileMenu.addEventListener('click', (e) => {
+  e.stopPropagation(); // Impede o evento de propagação para evitar conflitos
     navList.classList.toggle('active');
 });
 
+document.addEventListener('click', (e) => {
+  if (!navList.contains(e.target) && !mobileMenu.contains(e.target)) {
+    navList.classList.remove('active');
+  }
+});
 
 //função do email
 
