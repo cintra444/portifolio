@@ -126,7 +126,7 @@ body {
   .nav-list.active {
     display: flex;
     transform: translateY(0);
-    opacity: 1;
+    opacity: 1;;
   }
 
   .nav-list li {
@@ -496,6 +496,7 @@ form button {
   background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
   color: white;
   margin-top: 60px;
+  text-align: center;
 }
 
 .footer p {
@@ -710,8 +711,18 @@ body.dark-mode {
   color: var(--text-dark);
 }
 
+.dark-mode .menu-icon {
+  color: var(--text-dark);
+}
+
+.dark-mode .nav-list.active {
+  background-color: var(--container-dark);
+  border: 1px solid var(--accent-dark);
+}
+
 .dark-mode .content h1,
 .dark-mode .content p,
+.dark-mode .content h3,
 .dark-mode .about-content {
   color: var(--text-dark);
 }
@@ -723,6 +734,10 @@ body.dark-mode {
 .dark-mode .formulario {
   background-color: var(--container-dark);
   border-color: var(--primary-dark);
+}
+
+.dark-mode form label {
+  color: var(--text-dark);
 }
 
 .dark-mode form input,
