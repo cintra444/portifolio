@@ -4,7 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Eber Cintra - Desenvolvedor Full Stack: Java, Spring Boot, React, React Native, APIs REST e PostgreSQL. Serratec/SENAI-RJ." />
   <title>Eber Cintra - Desenvolvedor Fullstack</title>
+  <!-- Favicon (usa o logo do projeto; pode trocar por favicon.ico em assets/) -->
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <!-- Open Graph (troque content da og:url e og:image pela URL completa quando publicar) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Eber Cintra - Desenvolvedor Fullstack" />
+  <meta property="og:description" content="Portfólio: Java, Spring Boot, React, React Native, APIs REST e PostgreSQL. Serratec/SENAI-RJ." />
+  <meta property="og:image" content="assets/Perfil.png" />
+  <meta property="og:url" content="" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
 
@@ -60,7 +74,7 @@
       <div class="content">
         <div>
           <h3>Escribo - Gerador de Plano de Aula</h3>
-          Desafio Escibro - Uma aplicação web que gera planos de aula personalizados utilizando a API Gemini da Google e
+          Desafio Escribo - Uma aplicação web que gera planos de aula personalizados utilizando a API Gemini da Google e
           armazena os
           resultados no Supabase.
           <p class="stacks">
@@ -81,7 +95,7 @@
         </div>
 
         <div class="project-pic-container">
-          <img src="assets/escribo.jpg" alt="Desafio Escribo" class="project-pic" onclick="abrirLightbox(this.src)" />
+          <img src="assets/escribo.jpg" alt="Desafio Escribo" class="project-pic" loading="lazy" onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -116,7 +130,7 @@
         </div>
 
         <div class="project-pic-container">
-          <img src="assets/fruttyoog.png" alt="Fruttyoog API" class="project-pic" onclick="abrirLightbox(this.src)" />
+          <img src="assets/fruttyoog.png" alt="Fruttyoog API" class="project-pic" loading="lazy" onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -149,7 +163,7 @@
 
         </div>
         <div class="project-pic-container">
-          <img src="assets/app.png" alt="Fruttyoog App" class="project-pic" onclick="abrirLightbox(this.src)" />
+          <img src="assets/app.png" alt="Fruttyoog App" class="project-pic" loading="lazy" onclick="abrirLightbox(this.src)" />
         </div>
       </div>
 
@@ -167,7 +181,7 @@
               <i class="fab fa-github"></i> GitHub
             </a>
           </div>
-          <p id="form-status" aria-live="polite" style="position: absolute; left:-999px"></p>
+          <p id="modal-form-status" aria-live="polite" class="sr-only"></p>
         </div>
       </div>
 
@@ -199,7 +213,7 @@
 
         </div>
         <div class="project-pic-container">
-          <img src="./assets/petropolis_api.png" alt="Petropolis Participa API" class="project-pic"
+          <img src="./assets/petropolis_api.png" alt="Petropolis Participa API" class="project-pic" loading="lazy"
             onclick="abrirLightbox(this.src)" />
         </div>
       </div>
@@ -232,7 +246,7 @@
 
         </div>
         <div class="project-pic-container">
-          <img src="assets/petropolis.png" alt="Petropolis Participa App" class="project-pic"
+          <img src="assets/petropolis.png" alt="Petropolis Participa App" class="project-pic" loading="lazy"
             onclick="abrirLightbox(this.src)" />
         </div>
       </div>
@@ -266,7 +280,7 @@
 
         </div>
         <div class="project-pic-container">
-          <img src="./assets/Neki_api.png" alt="Gerenciador eventos API" class="project-pic"
+          <img src="./assets/Neki_api.png" alt="Gerenciador eventos API" class="project-pic" loading="lazy"
             onclick="abrirLightbox(this.src)" />
         </div>
       </div>
@@ -298,7 +312,7 @@
 
         </div>
         <div class="project-pic-container">
-          <img src="assets/desafioNeki.png" alt="Petropolis Participa App" class="project-pic"
+          <img src="assets/desafioNeki.png" alt="Gerenciador Eventos - site" class="project-pic" loading="lazy"
             onclick="abrirLightbox(this.src)" />
         </div>
       </div>
@@ -332,7 +346,7 @@
         </div>
 
         <div class="project-pic-container">
-          <img src="assets/reactNative.png" alt="PopCornHub App" class="project-pic"
+          <img src="assets/reactNative.png" alt="PopCornHub App" class="project-pic" loading="lazy"
             onclick="abrirLightbox(this.src)" />
         </div>
       </div>
@@ -368,7 +382,7 @@
 
         </div>
         <div class="project-pic-container">
-          <img src="assets/curunas.png" alt="Jogo Caso de Corunas" class="project-pic"
+          <img src="assets/curunas.png" alt="Jogo Caso de Corunas" class="project-pic" loading="lazy"
             onclick="abrirLightbox(this.src)" />
         </div>
       </div>
@@ -397,7 +411,7 @@
 
         </div>
         <div class="project-pic-container">
-          <img src="assets/poo.png" alt="Concessionaria Java" class="project-pic" onclick="abrirLightbox(this.src)" />
+          <img src="assets/poo.png" alt="Concessionaria Java" class="project-pic" loading="lazy" onclick="abrirLightbox(this.src)" />
         </div>
       </div>
     </section>
@@ -447,7 +461,7 @@
           </div>
 
           <button type="submit" class="btn">Enviar</button>
-          <div id="form-status" aria-live="polite" style="position: absolute; left:-999px"></div>
+          <div id="form-status" aria-live="polite" class="form-feedback"></div>
         </form>
       </div>
     </section>
@@ -466,9 +480,9 @@
     </div>
   </footer>
   <script src="script.js"></script>
-  <div id="lightbox" class="lightbox" onclick="fecharLightbox()" tabindex="0" role="button"
-    aria-label="Fechar Lightbox">
-    <img id="lightbox-img" alt="Imagem ampliada" />
+  <div id="lightbox" class="lightbox" tabindex="-1" role="dialog" aria-modal="true" aria-label="Imagem ampliada" onclick="if(event.target===this)fecharLightbox()">
+    <button type="button" class="lightbox-close" onclick="fecharLightbox()" aria-label="Fechar">×</button>
+    <img id="lightbox-img" alt="Imagem ampliada" onclick="fecharLightbox()" />
   </div>
 
 </body>

@@ -94,8 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => {
             formStatus.textContent = "";
             formStatus.className = "";
-            formStatus.style.position = "absolute";
-            formStatus.style.left = "-999px";
           }, 5000);
         });
     });
@@ -192,6 +190,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (currentTheme === "dark") {
     document.body.classList.add("dark-mode");
+  } else if (!currentTheme && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark");
   }
 
   toggleBtn.addEventListener("click", () => {
