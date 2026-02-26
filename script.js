@@ -1,42 +1,63 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Menu Hamburguer
   const mobileMenu = document.getElementById("mobile-menu");
   const navList = document.querySelector(".nav-list");
+  const toggleBtn = document.getElementById("theme-toggle");
+  const navLinks = Array.from(document.querySelectorAll('.nav-list a[href^="#"]'));
 
-  mobileMenu.addEventListener("click", (e) => {
-    e.stopPropagation();
-    navList.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-  });
+  if (mobileMenu && navList) {
+    mobileMenu.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navList.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+    });
 
-  document.addEventListener("click", (e) => {
-    if (!navList.contains(e.target) && !mobileMenu.contains(e.target)) {
-      navList.classList.remove("active");
-      document.body.classList.remove("menu-open");
-    }
-  });
+    document.addEventListener("click", (e) => {
+      if (!navList.contains(e.target) && !mobileMenu.contains(e.target)) {
+        navList.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
+    });
+  }
 
-  // Smooth scrolling para links internos
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  navLinks.forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute("href"));
+
       if (target) {
         window.scrollTo({
-          top: target.offsetTop - 80,
+          top: target.offsetTop - 85,
           behavior: "smooth",
         });
+      }
 
-        // Fechar menu mobile se estiver aberto
-        if (window.innerWidth <= 768) {
-          navList.classList.remove("active");
-          document.body.classList.remove("menu-open");
-        }
+      if (window.innerWidth <= 768 && navList) {
+        navList.classList.remove("active");
+        document.body.classList.remove("menu-open");
       }
     });
   });
 
-  // Envio de formulário de contato
+  const sections = Array.from(document.querySelectorAll("section[id]"));
+  const updateActiveLink = () => {
+    const scrollPosition = window.scrollY + 120;
+
+    let current = sections[0]?.id;
+    sections.forEach((section) => {
+      if (scrollPosition >= section.offsetTop) {
+        current = section.id;
+      }
+    });
+
+    navLinks.forEach((link) => {
+      const isCurrent = link.getAttribute("href") === `#${current}`;
+      link.classList.toggle("active", isCurrent);
+    });
+  };
+
+  updateActiveLink();
+  window.addEventListener("scroll", updateActiveLink, { passive: true });
+
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
@@ -44,8 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const submitBtn = this.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML =
-        '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
       submitBtn.disabled = true;
 
       const nome = document.getElementById("nome").value;
@@ -57,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!emailRegex.test(email)) {
         formStatus.textContent = "Por favor, insira um e-mail válido.";
         formStatus.className = "error";
-        formStatus.style.position = "static";
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
         return;
@@ -74,23 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(() => {
           formStatus.textContent = "Mensagem enviada com sucesso!";
           formStatus.className = "success";
-          formStatus.style.position = "static";
           contactForm.reset();
         })
         .catch((error) => {
           formStatus.textContent = "Erro ao enviar mensagem. Tente novamente.";
           formStatus.className = "error";
-          formStatus.style.position = "static";
           console.error("Erro:", error);
         })
         .finally(() => {
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
-
-          // Rolagem suave para o status
           formStatus.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
-          // Resetar status após 5 segundos
           setTimeout(() => {
             formStatus.textContent = "";
             formStatus.className = "";
@@ -99,10 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Modal de repositório
-
   window.openModal = openModal;
   window.closeModal = closeModal;
+
   function openModal(githubUrl) {
     const modal = document.getElementById("repositoryModal");
     const githubLink = document.getElementById("github-link");
@@ -125,19 +138,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  // Fechar modal ao clicar fora
-  document
-    .getElementById("repositoryModal")
-    .addEventListener("click", function (e) {
-      if (e.target === this) {
-        closeModal();
-      }
-    });
+  document.getElementById("repositoryModal")?.addEventListener("click", function (e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
 
-  // Adicionar usuário como colaborador
   function addUser() {
     const username = document.getElementById("github-username").value.trim();
-    const formStatus = document.getElementById("form-status");
 
     if (!username) {
       alert("Por favor, insira um nome de usuário válido.");
@@ -153,9 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     emailjs
       .send("service_0vp9zkg", "template_qxcsrp2", templateParams)
       .then(() => {
-        alert(
-          `Solicitação para adicionar ${username} foi enviada com sucesso!`
-        );
+        alert(`Solicitação para adicionar ${username} foi enviada com sucesso!`);
         closeModal();
       })
       .catch((error) => {
@@ -164,7 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  /// Função para abrir o lightbox
+  window.addUser = addUser;
+
   function abrirLightbox(src) {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
@@ -174,20 +181,14 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.focus();
   }
 
-  // Função para fechar o lightbox
-
-  window.abrirLightbox = function (src) {
-    abrirLightbox(src);
-  };
+  window.abrirLightbox = abrirLightbox;
   window.fecharLightbox = fecharLightbox;
+
   function fecharLightbox() {
     document.getElementById("lightbox").style.display = "none";
   }
 
-  // Dark mode toggle
-  const toggleBtn = document.getElementById("theme-toggle");
   const currentTheme = localStorage.getItem("theme");
-
   if (currentTheme === "dark") {
     document.body.classList.add("dark-mode");
   } else if (!currentTheme && window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -195,16 +196,15 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", "dark");
   }
 
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    const isDark = document.body.classList.contains("dark-mode");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      toggleBtn.style.transform = isDark ? "rotate(180deg)" : "rotate(0)";
+    });
+  }
 
-    // Animação do ícone
-    toggleBtn.style.transform = isDark ? "rotate(180deg)" : "rotate(0)";
-  });
-
-  // Fechar modais com ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeModal();
@@ -212,23 +212,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Carregamento suave das imagens
+  const revealItems = document.querySelectorAll("#home .content, #works .content, #about .about-content, #contact .formulario, section h2");
+  revealItems.forEach((item) => item.classList.add("reveal"));
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
+
   const lazyImages = document.querySelectorAll('img[loading="lazy"]');
 
   if ("IntersectionObserver" in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target;
           img.src = img.dataset.src || img.src;
           img.removeAttribute("data-src");
-          imageObserver.unobserve(img);
+          observer.unobserve(img);
         }
       });
     });
 
-    lazyImages.forEach((img) => {
-      imageObserver.observe(img);
-    });
+    lazyImages.forEach((img) => imageObserver.observe(img));
   }
 });
+
